@@ -54,9 +54,6 @@ from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 chkpointer = ModelCheckpoint(filepath='weights_best.hdf5', save_best_only = True)
 md.fit(X_train, y_train, epochs=35, batch_size = 32, callbacks=[chkpointer])
 
-from google.colab import files
-upload_data = files.upload()
-test_data = upload_data
 
 data2 = pd.read_csv('https://raw.githubusercontent.com/swapnilsaurav/Dataset/master/FB_Fin_Data.csv')
 actual_values = data2['Close'].values
